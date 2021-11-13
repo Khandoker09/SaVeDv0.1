@@ -2,6 +2,8 @@
 Name :daZ
 Created by Khandoker Tanjim Ahammad
 Date: 11/11/21
+updated: 13/11/21
+
 Purpose: Analyze any data sets using streamlit
 Limitations: often datasets contain too much text does not work
 
@@ -11,6 +13,8 @@ import streamlit as st
 import plotly_express as px
 import pandas as pd
 import io
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 # configuration
 st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -43,7 +47,7 @@ try:
     # lets show the dataset
         st.write(df)
     # 1st Sidebar Select Box for analyze data sets 
-    select = st.sidebar.selectbox('Analyze', ['Info about datasets', 'Describe data',  'Find Missing value'])
+    select = st.sidebar.selectbox('Analyze', ['Info about datasets', 'Describe data',  'Find Missing value','Correlation Matrix'])
     #2nd sidebar-- filtering all the column 
     filtered = st.multiselect("Overall columns", options=list(df.columns), default=list(df.columns))
     st.write(df[filtered])
@@ -64,6 +68,11 @@ try:
         buffer = io.StringIO()
         s= df.isnull().sum()
         st.table(s)
+
+    elif select == 'Correlation Matrix':
+        fig, ax = plt.subplots(figsize=(10,10))
+        sns.heatmap(df.corr(), annot=True, ax=ax)
+        st.pyplot(fig)
     #3rd side bar to decide which graph to show 
     chart_select= st.sidebar.selectbox(
                     label='Select the chart type',
