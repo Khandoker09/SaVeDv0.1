@@ -1,2 +1,2 @@
 # daZ
-creating a data analyzer tool using streamlit
+Simple data analysis tool with some visualization option using streamlit
