@@ -7,10 +7,9 @@ Simple data analysis tool with some visualization option using streamlit
 Go to your project directory 
 write  
 
-'''
-pipreqs  ./  
 
-'''
+    pipreqs  ./  
+
 in command line which generates requrement.txt file 
 
 
@@ -20,22 +19,20 @@ in command line which generates requrement.txt file
 create a text file named 'setup.txt' file 
 copy and paste the folwing code
 
-'''
-mkdir -p ~/.streamlit/
+    mkdir -p ~/.streamlit/
+    
+    echo "\
+    [general]\n\
+    email = \"your-email@domain.com\"\n\
+    " > ~/.streamlit/credentials.toml
+    
+    echo "\
+    [server]\n\
+    headless = true\n\
+    enableCORS=false\n\
+    port = $PORT\n\
+    " > ~/.streamlit/config.toml
 
-echo "\
-[general]\n\
-email = \"your-email@domain.com\"\n\
-" > ~/.streamlit/credentials.toml
-
-echo "\
-[server]\n\
-headless = true\n\
-enableCORS=false\n\
-port = $PORT\n\
-" > ~/.streamlit/config.toml
-
-'''
 
 then change the extention of the file from .txt to .sh to make it bash file. 
 
@@ -44,43 +41,47 @@ then change the extention of the file from .txt to .sh to make it bash file.
 
 Create a file ' Procfile.txt'
 copy paste the folwing code
-'''
-web: sh setup.sh && streamlit run  filename.py
-'''
+
+    web: sh setup.sh && streamlit run  filename.py
+
 
 make sure in the end filename should be your script name.
  
 
 ### Step 4 initiating git repo
 
-'''
- git init
-'''
+
+
+     git init
+
+
 
 ### step 5
 
 Login to Heroku
 
-'''
-heroku login
-'''
+
+    heroku login
+
 
 ### step 6
 
 Create your desier host name by typing heroku create ''hostname'' 
-''''
-heroku create domainname
-'''
+
+
+    heroku create domainname
+
+
+
 ### step 7
 
 Then type the following command 
 Push the code to that instance using the following commands
 
-'''
-git add .
-git commit -m "some message"
-git push heroku master
-'''
 
-For further information you can watch following video . 
-https://www.youtube.com/watch?v=nJHrSvYxzjE&list=PLuM-0SV1yHyoo9AKJI5a6JyGgu5V6ZXjj&index=8
+    git add .
+    git commit -m "some message"
+    git push heroku master
+
+
+For further information you can watch following [video](https://www.youtube.com/watch?v=nJHrSvYxzjE&list=PLuM-0SV1yHyoo9AKJI5a6JyGgu5V6ZXjj&index=8) . 
