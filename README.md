@@ -22,24 +22,11 @@ graph LR
 ```
 ```mermaid
 graph LR
-A[Chart type] --> B[Scatterplots] --> C[Lineplots]--> D[Histogram]--> E[Boxplot]-->F[Barchart]-->G[Funnel]
-```
-sadasdsaf
-
-```
-graph TD
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-
-
-
-```flow
-my content
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-
+ A[Chart type] --> B[Scatterplots];
+ B[Scatterplots] --> C[Lineplots];
+ C[Lineplots] --> D[Histogram]; 
+ D[Histogram] --> E[Boxplot];
+ E[Boxplot] -->F[Barchart];
+ F[Barchart] -->G[Funnel];
+ 
 ```
