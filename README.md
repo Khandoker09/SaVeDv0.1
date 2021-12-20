@@ -20,6 +20,7 @@ graph LR
    D[Find missing value] --> E[Correlation Matrix];
 
 ```
+We can also draw the following plot
 ```mermaid
 graph LR
  A[Chart type] --> B[Scatterplots];
