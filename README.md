@@ -14,9 +14,32 @@ You can check the datasets by droping the whichever columns you want. Also you c
 
 ```mermaid
 graph LR
-A[Analyze] --> B[Info about datasets] --> C[Describe datasets]--> D[Find missing value]--> E[Correlation Matrix]
+   A[Analyze] --> B[Info about datasets];
+   B[Info about datasets] --> C[Describe datasets];
+   C[Describe datasets] --> D[Find missing value];
+   D[Find missing value] --> E[Correlation Matrix];
+
 ```
 ```mermaid
 graph LR
 A[Chart type] --> B[Scatterplots] --> C[Lineplots]--> D[Histogram]--> E[Boxplot]-->F[Barchart]-->G[Funnel]
+```
+sadasdsaf
+
+```
+graph TD
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+
+
+
+```flow
+my content
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+
 ```
