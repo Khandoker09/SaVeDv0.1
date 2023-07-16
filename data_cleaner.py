@@ -20,8 +20,8 @@ import matplotlib.pyplot as plt
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # title of the app
-st.title("daZ")
-st.title("A simple tools to analyze data and also to visulize data to find out the relation between the columns in datasets")
+st.title("SaVeD")
+st.title("A simple tools to analyze excel data and also to visualize data to find out the relation between the columns in datasets")
 # Add a sidebar
 st.sidebar.subheader("Visualization Settings")
 
