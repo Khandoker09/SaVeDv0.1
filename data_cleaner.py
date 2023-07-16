@@ -1,5 +1,5 @@
 '''
-Name :daZ
+Name :SaVed
 Created by Khandoker Tanjim Ahammad
 Date: 11/11/21
 updated: 13/11/21
@@ -14,7 +14,7 @@ import plotly_express as px
 import pandas as pd
 import io
 import seaborn as sns
-import matplotlib.pyplot as plt
+
 
 # configuration
 st.set_option('deprecation.showfileUploaderEncoding', False)
