@@ -1,6 +1,6 @@
 # Simple App to Visualize Excel Data(SaVeD)
 Simple data analysis tool with some visualization option using streamlit.
-You can upload your onw datasets in this app. However, there is some limitations, you can only upload file which are only 200mb or below 200 mb.  
+You can upload your own datasets in this app. However, there is some limitations, you can only upload file which are only limited 200mb or below 200 mb.  
 ### File type
 This app support .xlsx and .CSV file. 
 
