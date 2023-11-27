@@ -24,11 +24,12 @@ st.title("SaVeD")
 st.title("A simple tools to analyze excel data and also to visualize data to find out the relation between the columns in datasets")
 # Add a sidebar
 st.sidebar.subheader("Visualization Settings")
-st.sidebar.markdown("Maintained by: [Khandoker Tanjim Ahammad](https://github.com/Khandoker09)")
+
 # Setup file upload
 uploaded_file = st.sidebar.file_uploader(
                         label="Upload your CSV or Excel file. (200MB max)",
                          type=['csv', 'xlsx'])
+st.sidebar.markdown("Maintained by: [Khandoker Tanjim Ahammad](https://github.com/Khandoker09)")
 # Defining data set as global variable 
 global df
 if uploaded_file is not None:
